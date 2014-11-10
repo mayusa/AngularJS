@@ -16,8 +16,8 @@
     });
 
     app.controller('ErrCtrl', function ($rootScope) {
-        $rootScope.$on("$routeChangeError", function(){
-            console.log("failed to change routes");
+        $rootScope.$on("$routeChangeError", function(event, current, previous, rejection){
+            console.log(rejection);
         });
     });
 
@@ -31,8 +31,8 @@
     viewCtrl.loadData = function($q, $timeout){
         var defer = $q.defer();
         $timeout(function(){
-            defer.reject("loadData1");
-        }, 2000);
+            defer.reject("your network is down");//if http request fail to load
+        }, 1000);
         return defer.promise;
     };
 
