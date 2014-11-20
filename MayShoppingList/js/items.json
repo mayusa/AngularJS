@@ -1,0 +1,11 @@
+{
+	"items":[
+		{"id":"1","item":"1111","qty":"1","type":"1","done":"0","date":"2014-11-18 09:34:53","type_name":"Qty"}
+	],
+
+	"types":[
+		{"id":"1","name":"Qty"},
+		{"id":"2","name":"Lb"},
+		{"id":"3","name":"Kg"}
+	]
+}
